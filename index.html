@@ -4,37 +4,72 @@
     <title>Webcams</title>
     <style>
       body {
-      font-family: Verdana, sans-serif; 
+      font-family: Verdana, sans-serif;
+      font-size: 18px;
       margin:0
       }
-      .mySlides {
-      display: none;
-      height: 100vh;
-        margin-left: auto;
-  	margin-right: auto;
-      }
       .slideshow-container {
-      height: 100vh;
-      width: 100vw;
+      display: none;
+      height: 1440px;
+      width: 2560px;
+      background-size: contain;
+      }
+      .windbeutelbaron {
+      background-image: url("https://www.foto-webcam.eu/webcam/windbeutelbaron/current/1920.jpg");
+      }
+      .vorderloiplsau {
+      background-image: url("https://www.foto-webcam.eu/webcam/vorderloiplsau/current/1920.jpg");
+      }
+      .stoehrhaus {
+      background-image: url("https://www.foto-webcam.eu/webcam/stoehrhaus/current/1920.jpg");
+      }
+      .blaueishuette {
+      background-image: url("https://images-webcams.windy.com/18/1378595318/current/full/1378595318.jpg");
+      }
+      .watzmann1 {
+      background-image: url("https://images-webcams.windy.com/03/1366494503/current/full/1366494503.jpg");
+      }
+      .watzmann2 {
+      background-image: url("https://images-webcams.windy.com/08/1366494908/current/full/1366494908.jpg");
       }
     </style>
   </head>
   <body>
-    <div class="slideshow-container">
-        <img src="https://www.foto-webcam.eu/webcam/windbeutelbaron/current/1920.jpg" class="mySlides">
-        <img src="https://www.foto-webcam.eu/webcam/stoehrhaus/current/1920.jpg" class="mySlides">
-        <img src="https://www.foto-webcam.eu/webcam/vorderloiplsau/current/1920.jpg" class="mySlides">
-        <img src="https://images-webcams.windy.com/18/1378595318/current/full/1378595318.jpg" class="mySlides">
-        <img src="https://images-webcams.windy.com/03/1366494503/current/full/1366494503.jpg" class="mySlides">
-        <img src="https://images-webcams.windy.com/08/1366494908/current/full/1366494908.jpg" class="mySlides">
+    <div class="slideshow-container windbeutelbaron">
+        <p style="position:absolute;top:430px;left:850px;color:red;">_________Watzmannhaus 1920 m</p>
+        <p style="position:absolute;top:380px;left:830px;color:red;">_________2250 m</p>
+        <p style="position:absolute;top:295px;left:680px;color:red;">_________Hocheck 2651 m</p>
+	<p style="position:absolute;top:330px;left:100px;color:red;">Watzmannfrau 2307 m_________</p>
+	<p style="position:absolute;top:403px;left:130px;color:red;">1980 m_________</p>
+	<p style="position:absolute;top:435px;left:25px;color:red;">1815 m_________<br />Mooslahner</p>
+	<p style="position:absolute;top:500px;left:765px;color:red;">_________Falzalm 1630 m</p>
+	<p style="position:absolute;top:535px;left:900px;color:red;">Grünstein 1304 m_________</p>
+        <p style="position:absolute;top:525px;left:1445px;color:red;">_________Stanglahnerkopf 1791 m</p>
+        <p style="position:absolute;top:448px;left:1570px;color:red;">_________Rotpalfen 2367 m</p>
+        <p style="position:absolute;top:480px;left:1650px;color:red;">_________Steinberg 2026 m</p>
     </div>
+    <div class="slideshow-container vorderloiplsau">
+        <p style="position:absolute;top:445px;left:970px;color:red;">_________1710 m</p>
+        <p style="position:absolute;top:405px;left:905px;color:red;">_________1813 m</p>
+        <p style="position:absolute;top:330px;left:738px;color:red;">_________Wasserwandkopf 2065 m</p>
+	<p style="position:absolute;top:560px;left:875px;color:red;">_________Schärtenalm 1360 m</p>
+	<p style="position:absolute;top:525px;left:1060px;color:red;">_________1510 m</p>
+        <p style="position:absolute;top:650px;left:1850px;color:red;">_________Halsalm 1210 m</p>
+        <p style="position:absolute;top:240px;left:570px;color:red;">_________Rotpalfen 2367 m</p>
+        <p style="position:absolute;top:415px;left:1505px;color:red;">Stadelhorn 2286 m_________</p>
+    </div>
+    <div class="slideshow-container stoehrhaus"></div>
+    <div class="slideshow-container blaueishuette"></div>
+    <div class="slideshow-container watzmann1"></div>
+    <div class="slideshow-container watzmann2"></div>
     <script>
       var slideIndex = 0;
       showSlides();
+      reloadPage();
       
       function showSlides() {
         var i;
-        var slides = document.getElementsByClassName("mySlides");
+        var slides = document.getElementsByClassName("slideshow-container");
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none"; 
         }
@@ -42,6 +77,9 @@
         if (slideIndex > slides.length) {slideIndex = 1} 
         slides[slideIndex-1].style.display = "block"; 
         setTimeout(showSlides, 10000); // Change image every 10 seconds
+      }
+      function reloadPage() {
+      	setTimeout(reloadPage, 300000) // Reload every 5 Minutes
       }
     </script>
   </body>
