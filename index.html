@@ -1,179 +1,649 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   <meta http-equiv="refresh" content="300" />
-    <title>Webcams</title>
-    <style>
-      body {
+
+<head>
+  <meta http-equiv="refresh" content="300" />
+  <title>Webcams</title>
+  <style>
+    body {
       font-family: Verdana, sans-serif;
       font-size: 18px;
-      margin:0
-      }
-      p {
+      margin: 0
+    }
+
+    p {
       white-space: nowrap;
+    }
+
+    .marker {
+      position: absolute;
+      color: red;
+    }
+
+    .link {
+      position:absolute;
+      color: black;
+      font-size: 22px;
+      top: 80px;
+      left: 10px;
+      text-decoration: none;
+    }
+
+    .copyright {
+      position:absolute;
+      color: black;
+      font-size: 22px;
+      top: 85px;
+      left: 10px;
       }
-      @media only screen and (max-width: 2559px) {
-      .slideshow-container {
-      display: none;
-      height: 1080px;
-      width: 1920px;
-      background-size: contain;
-      }
-      }
-      @media only screen and (min-width: 2560px) {
-      .slideshow-container {
-      display: none;
-      height: 1440px;
-      width: 2560px;
-      background-size: contain;
-      }
-      }
-      .windbeutelbaron {
+
+    .windbeutelbaron {
       background-image: url("https://www.foto-webcam.eu/webcam/windbeutelbaron/current/1920.jpg")
-      }
-      .vorderloiplsau {
+    }
+
+    .vorderloiplsau {
       background-image: url("https://www.foto-webcam.eu/webcam/vorderloiplsau/current/1920.jpg");
-      }
-      .stoehrhaus {
+    }
+
+    .stoehrhaus {
       background-image: url("https://www.foto-webcam.eu/webcam/stoehrhaus/current/1920.jpg");
-      }
-      .blaueishuette {
-      background-image: url("https://images-webcams.windy.com/18/1378595318/current/full/1378595318.jpg");
-      }
-      .watzmannhaus {
-      background-image: url("https://images-webcams.windy.com/08/1366494908/current/full/1366494908.jpg");
-      }
-      .funtenseetauern {
+    }
+
+    .funtenseetauern {
       background-image: url("https://www.foto-webcam.eu/webcam/funtenseetauern/current/1920.jpg");
+    }
+
+    .slideshow-container {
+      display: none;
+      background-size: contain;
+    }
+    
+    .desc {
+      font-size: 22px;
+    }
+
+    .h {
+      top:35px;
+      left:10px;
+      font-weight:bold;
+    }
+
+    .active {
+      font-weight:bold;
+    }
+
+    @media only screen and (max-width: 2559px) {
+      .slideshow-container {
+        height: 1080px;
+        width: 1920px;
       }
-    </style>
-  </head>
-  <body>
-        <div class="slideshow-container windbeutelbaron">
-        <p style="position:absolute;top:30px;left:10px;color:red;font-size:22px;font-weight:bold;">Webcam Höhe: 950m</p>
-        
-        <p style="position:absolute;top:315px;left:640px;color:red;">_________Watzmannhaus 1930 m</p>
-        <p style="position:absolute;top:278px;left:620px;color:red;">_________2250 m</p>
-        <p style="position:absolute;top:215px;left:510px;color:red;">_________Hocheck 2651 m</p>
-	<p style="position:absolute;top:240px;left:45px;color:red;">Watzmannfrau 2307 m_________</p>
-	<p style="position:absolute;top:297px;left:80px;color:red;">1980 m_________</p>
-	<p style="position:absolute;top:320px;left:5px;color:red;">1815 m_________<br />Mooslahner</p>
-	<p style="position:absolute;top:365px;left:580px;color:red;">_________Falzalm 1630 m</p>
-	<p style="position:absolute;top:395px;left:645px;color:red;">Grünstein 1304 m_________</p>
-        <p style="position:absolute;top:388px;left:1085px;color:red;">_________Stanglahnerkopf 1791 m</p>
-        <p style="position:absolute;top:330px;left:1180px;color:red;">_________Rotpalfen 2367 m</p>
-        <p style="position:absolute;top:355px;left:1240px;color:red;">_________Steinberg 2065 m</p>
-        
-        <p style="position:absolute;top:900px;left:10px;color:red;font-size:22px;font-weight:bold;">Windbeutelbaron</p>
-        <p style="position:absolute;top:920px;left:10px;color:red;font-size:22px;">Vorderloiplsau</p>
-        <p style="position:absolute;top:940px;left:10px;color:red;font-size:22px;">Stöhrhaus</p>
-        <p style="position:absolute;top:960px;left:10px;color:red;font-size:22px;">Blaueishütte</p>
-        <p style="position:absolute;top:980px;left:10px;color:red;font-size:22px;">Watzmannhaus</p>
-        <p style="position:absolute;top:1000px;left:10px;color:red;font-size:22px;">Funtenseetauern</p>
-    </div>
-    <div class="slideshow-container vorderloiplsau">
-        <p style="position:absolute;top:30px;left:10px;color:red;font-size:22px;font-weight:bold;">Webcam Höhe: 1054m</p>
-        
-        <p style="position:absolute;top:325px;left:725px;color:red;">_________1710 m</p>
-        <p style="position:absolute;top:298px;left:680px;color:red;">_________1813 m</p>
-        <p style="position:absolute;top:240px;left:555px;color:red;">_________Wasserwandkopf 2065 m</p>
-	<p style="position:absolute;top:410px;left:660px;color:red;">_________Schärtenalm 1360 m</p>
-	<p style="position:absolute;top:388px;left:802px;color:red;">_________1510 m</p>
-        <p style="position:absolute;top:480px;left:1390px;color:red;">_________Halsalm 1210 m</p>
-        <p style="position:absolute;top:170px;left:425px;color:red;">_________Rotpalfen 2367 m</p>
-        <p style="position:absolute;top:305px;left:1092px;color:red;">Stadelhorn 2286 m_________</p>
-        <p style="position:absolute;top:172px;left:30px;color:red;">Steinberg 2065 m_________</p>
-        <p style="position:absolute;top:252px;left:125px;color:red;">1770 m_________</p>
-        <p style="position:absolute;top:360px;left:15px;color:red;">1470 m_________</p>
-        <p style="position:absolute;top:445px;left:70px;color:red;">1250 m_________</p>
-        <p style="position:absolute;top:480px;left:60px;color:red;">1170 m_________</p>
-        <p style="position:absolute;top:353px;left:1075px;color:red;">1950 m_________</p>
-        <p style="position:absolute;top:430px;left:1395px;color:red;">_________1370 m</p>
-        
-        
-        <p style="position:absolute;top:900px;left:10px;color:red;font-size:22px;">Windbeutelbaron</p>
-        <p style="position:absolute;top:920px;left:10px;color:red;font-size:22px;font-weight:bold;">Vorderloiplsau</p>
-        <p style="position:absolute;top:940px;left:10px;color:red;font-size:22px;">Stöhrhaus</p>
-        <p style="position:absolute;top:960px;left:10px;color:red;font-size:22px;">Blaueishütte</p>
-        <p style="position:absolute;top:980px;left:10px;color:red;font-size:22px;">Watzmannhaus</p>
-        <p style="position:absolute;top:1000px;left:10px;color:red;font-size:22px;">Funtenseetauern</p>
-    </div>
-    <div class="slideshow-container stoehrhaus">
-        <p style="position:absolute;top:30px;left:10px;color:red;font-size:22px;font-weight:bold;">Webcam Höhe: 1894m</p>
-        
-	<p style="position:absolute;top:372px;left:580px;color:red;">Grünstein 1304 m_________</p>
-	<p style="position:absolute;top:340px;left:600px;color:red;">Kühroint 1407 m_________</p>
-	<p style="position:absolute;top:295px;left:700px;color:red;">Gendarm 1850 m_________</p>
-	<p style="position:absolute;top:240px;left:695px;color:red;">kl. Watzmann 2307 m_________</p>
-	<p style="position:absolute;top:380px;left:1110px;color:red;">_________Stubenalm 1180 m</p>
-	<p style="position:absolute;top:275px;left:1370px;color:red;">Steinberg 2065 m_________</p>
-	<p style="position:absolute;top:400px;left:1570px;color:red;">_________Hirschkaser 1385 m</p>
-        
-        <p style="position:absolute;top:900px;left:10px;color:red;font-size:22px;">Windbeutelbaron</p>
-        <p style="position:absolute;top:920px;left:10px;color:red;font-size:22px;">Vorderloiplsau</p>
-        <p style="position:absolute;top:940px;left:10px;color:red;font-size:22px;font-weight:bold;">Stöhrhaus</p>
-        <p style="position:absolute;top:960px;left:10px;color:red;font-size:22px;">Blaueishütte</p>
-        <p style="position:absolute;top:980px;left:10px;color:red;font-size:22px;">Watzmannhaus</p>
-        <p style="position:absolute;top:1000px;left:10px;color:red;font-size:22px;">Funtenseetauern</p>
-    </div>
-    <div class="slideshow-container blaueishuette">
-        <p style="position:absolute;top:30px;left:10px;color:red;font-size:22px;font-weight:bold;">Webcam Höhe: 1680m</p>
-        
-        <p style="position:absolute;top:900px;left:10px;color:red;font-size:22px;">Windbeutelbaron</p>
-        <p style="position:absolute;top:920px;left:10px;color:red;font-size:22px;">Vorderloiplsau</p>
-        <p style="position:absolute;top:940px;left:10px;color:red;font-size:22px;">Stöhrhaus</p>
-        <p style="position:absolute;top:960px;left:10px;color:red;font-size:22px;font-weight:bold;">Blaueishütte</p>
-        <p style="position:absolute;top:980px;left:10px;color:red;font-size:22px;">Watzmannhaus</p>
-        <p style="position:absolute;top:1000px;left:10px;color:red;font-size:22px;">Funtenseetauern</p>
-    </div>
-    <div class="slideshow-container watzmannhaus">
-	<p style="position:absolute;top:0px;left:10px;color:red;font-size:26px;font-weight:bold;">Achtung Betrieb Webcam nur von 08:00 bis 18:00 Uhr</p>
-        <p style="position:absolute;top:30px;left:10px;color:red;font-size:22px;font-weight:bold;">Webcam Höhe: 1930m</p>
-        
-        <p style="position:absolute;top:35px;left:1200px;color:red;">_________2016 m</p>
-        <p style="position:absolute;top:170px;left:1540px;color:red;">1980 m_________</p>
-        
-        <p style="position:absolute;top:900px;left:10px;color:red;font-size:22px;">Windbeutelbaron</p>
-        <p style="position:absolute;top:920px;left:10px;color:red;font-size:22px;">Vorderloiplsau</p>
-        <p style="position:absolute;top:940px;left:10px;color:red;font-size:22px;">Stöhrhaus</p>
-        <p style="position:absolute;top:960px;left:10px;color:red;font-size:22px;">Blaueishütte</p>
-        <p style="position:absolute;top:980px;left:10px;color:red;font-size:22px;font-weight:bold;">Watzmannhaus</p>
-        <p style="position:absolute;top:1000px;left:10px;color:red;font-size:22px;">Funtenseetauern</p>
-    </div>
-    <div class="slideshow-container funtenseetauern">
-        <p style="position:absolute;top:30px;left:10px;color:red;font-size:22px;font-weight:bold;">Webcam Höhe: 2520m</p>
-        
-        <p style="position:absolute;top:280px;left:125px;color:red;">_________Biwak 2380 m</p>
-        <p style="position:absolute;top:295px;left:285px;color:red;">_________Skischarte 2240 m</p>
-	<p style="position:absolute;top:275px;left:560px;color:red;">_________kl. Watzmann 2307 m</p>
-	<p style="position:absolute;top:338px;left:670px;color:red;">_________1980 m</p>
-	<p style="position:absolute;top:368px;left:775px;color:red;">_________Mooslahner 1815 m</p>
-	<p style="position:absolute;top:420px;left:875px;color:red;">_________Kühroint 1407 m</p>
-	<p style="position:absolute;top:425px;left:350px;color:red;">Watzmannlabl 1630 m_________</p>
-	<p style="position:absolute;top:470px;left:1525px;color:red;">_________Gotzenalm 1680 m</p>
-        
-        <p style="position:absolute;top:900px;left:10px;color:red;font-size:22px;">Windbeutelbaron</p>
-        <p style="position:absolute;top:920px;left:10px;color:red;font-size:22px;">Vorderloiplsau</p>
-        <p style="position:absolute;top:940px;left:10px;color:red;font-size:22px;">Stöhrhaus</p>
-        <p style="position:absolute;top:960px;left:10px;color:red;font-size:22px;">Blaueishütte</p>
-        <p style="position:absolute;top:980px;left:10px;color:red;font-size:22px;">Watzmannhaus</p>
-        <p style="position:absolute;top:1000px;left:10px;color:red;font-size:22px;font-weight:bold;">Funtenseetauern</p>
-    </div>
-    <script>
-      var slideIndex = 0;
-      showSlides();
+
+      .w {
+        top:950px;
+        left:10px;
+      }
+
+      .v {
+        top:975px;
+        left:10px;
+      }
+
+      .s {
+        top:1000px;
+        left:10px;
+      }
+
+      .f {
+        top:1025px;
+        left:10px;
+      }
+
+      .w-m-1930 {
+        top: 315px;
+        left: 640px;
+      }
+
+      .w-m-2250{
+        top:278px;
+        left:620px;
+      }
+
+      .w-m-2651 {
+        top:215px;
+        left:510px;
+      }
+
+      .w-m-2307 {
+        top:240px;
+        left:45px;
+      }
+
+      .w-m-1980 {
+        top:297px;
+        left:80px;
+      }
+
+      .w-m-1815 {
+        top:320px;
+        left:5px;
+      }
+
+      .w-m-1630 {
+        top:365px;
+        left:580px;
+      }
+
+      .w-m-1304 {
+        top:395px;
+        left:645px;
+      }
+
+      .w-m-1791 {
+        top:388px;
+        left:1085px
+      }
+
+      .w-m-2367 {
+        top:330px;
+        left:1180px;
+      }
+
+      .w-m-2065 {
+        top:355px;
+        left:1240px;
+      }
+
+      .v-m-1710 {
+        top:325px;
+        left:725px;
+      }
+
+      .v-m-1813 {
+        top:298px;
+        left:680px
+      }
+
+      .v-m-2066 {
+        top:240px;
+        left:555px;
+      }
+
+      .v-m-1360 {
+        top:410px;
+        left:660px;
+      }
+
+      .v-m-1510 {
+        top:388px;
+        left:802px;
+      }
+
+      .v-m-1210 {
+        top:480px;
+        left:1390px;
+      }
+
+      .v-m-2367 {
+        top:170px;
+        left:425px;
+      }
+
+      .v-m-2286 {
+        top:305px;
+        left:1092px;
+      }
+
+      .v-m-2065 {
+        top:172px;
+        left:30px;
+      }
+
+      .v-m-1770 {
+        top:252px;
+        left:125px;
+      }
+
+      .v-m-1470 {
+        top:360px;
+        left:15px;
+      }
+
+      .v-m-1250 {
+        top:445px;
+        left:70px;
+      }
+
+      .v-m-1170 {
+        top:480px;
+        left:60px;
+      }
+
+      .v-m-1950 {
+        top:353px;
+        left:1075px;
+      }
+
+      .v-m-1370 {
+        top:430px;
+        left:1395px;
+      }
+
+      .s-m-1304 {
+        top:372px;
+        left:580px;
+      }
+
+      .s-m-1407 {
+        top:340px;
+        left:600px;
+      }
+
+      .s-m-1850 {
+        top:295px;
+        left:700px;
+      }
+
+      .s-m-2307 {
+        top:240px;
+        left:695px
+      }
+
+      .s-m-1180 {
+        top:380px;
+        left:1110px
+      }
+
+      .s-m-2065 {
+        top:275px;
+        left:1370px;
+      }
+
+      .s-m-1385 {
+        top:400px;
+        left:1570px;
+      }
+
+      .f-m-2380 {
+        top:280px;
+        left:125px;
+      }
+
+      .f-m-2240 {
+        top:295px;
+        left:285px;
+      }
+
+      .f-m-2307 {
+        top:275px;
+        left:560px;
+      }
+
+      .f-m-1980 {
+        top:338px;
+        left:670px;
+      }
+
+      .f-m-1815 {
+        top:368px;
+        left:775px;
+      }
+
+      .f-m-1407 {
+        top:420px;
+        left:875px;
+      }
+
+      .f-m-1630 {
+        top:425px;
+        left:350px;
+      }
+
+      .f-m-1680 {
+        top:470px;
+        left:1525px;
+      }
+
+    }
+
+    @media only screen and (min-width: 2560px) {
+      .slideshow-container {
+        height: 1440px;
+        width: 2560px;
+      }
+
+      .w {
+        top:1300px;
+        left:10px;
+      }
+
+      .v {
+        top:1325px;
+        left:10px;
+      }
+
+      .s {
+        top:1350px;
+        left:10px;
+      }
+
+      .f {
+        top:1375px;
+        left:10px;
+      }
       
-      function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("slideshow-container");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1} 
-        slides[slideIndex-1].style.display = "block"; 
-        setTimeout(showSlides, 10000); // Change image every 10 seconds
+
+      .w-m-1930 {
+        top: 430px;
+        left: 850px;
       }
-    </script>
-  </body>
+
+      .w-m-2250 {
+        top:380px;
+        left:830px;
+      }
+      
+      .w-m-2651 {
+        top:290px;
+        left:680px;
+      }
+
+      .w-m-2307 {
+        top:330px;
+        left:75px;
+      }
+
+      .w-m-1980 {
+        top:400px;
+        left:105px;
+      }
+
+      .w-m-1815 {
+        top:430px;
+        left:7px;
+      }
+
+      .w-m-1630 {
+        top:490px;
+        left:770px;
+      }
+
+      .w-m-1304 {
+        top:530px;
+        left:860px;
+      }
+
+      .w-m-1791 {
+        top:520px;
+        left:1450px
+      }
+
+      .w-m-2367 {
+        top:440px;
+        left:1480px;
+      }
+
+      .w-m-2065 {
+        top:480px;
+        left:1550px;
+      }
+
+      .v-m-1710 {
+        top:440px;
+        left:970px;
+      }
+
+      .v-m-1813 {
+        top:400px;
+        left:910px
+      }
+
+      .v-m-2066 {
+        top:320px;
+        left:740px;
+      }
+
+      .v-m-1360 {
+        top:540px;
+        left:880px;
+      }
+      .v-m-1510 {
+        top:520px;
+        left:1070px;
+      }
+
+      .v-m-1210 {
+        top:640px;
+        left:1855px;
+      }
+
+      .v-m-2367 {
+        top:230px;
+        left:560px;
+      }
+
+      .v-m-2286 {
+        top:405px;
+        left:1450px;
+      }
+      
+      .v-m-2065 {
+        top:230px;
+        left:40px;
+      }
+
+      .v-m-1770 {
+        top:326px;
+        left:165px;
+      }
+
+      .v-m-1470 {
+        top:480px;
+        left:20px;
+      }
+
+      .v-m-1250 {
+        top:600px;
+        left:85px;
+      }
+
+      .v-m-1170 {
+        top:640px;
+        left:80px;
+      }
+
+      .v-m-1950 {
+        top:480px;
+        left:1433px;
+      }
+
+      .v-m-1370 {
+        top:570px;
+        left:1870px;
+      }
+
+      .s-m-1304 {
+        top:500px;
+        left:780px;
+      }
+
+      .s-m-1407 {
+        top:440px;
+        left:800px;
+      }
+
+      .s-m-1850 {
+        top:400px;
+        left:930px;
+      }
+
+      .s-m-2307 {
+        top:320px;
+        left:930px
+      }
+
+      .s-m-1180 {
+        top:520px;
+        left:1480px
+      }
+
+      .s-m-2065 {
+        top:360px;
+        left:1720px;
+      }
+      .s-m-1385 {
+        top:530px;
+        left:2095px;
+      }
+
+      .f-m-2380 {
+        top:360px;
+        left:165px;
+      }
+
+      .f-m-2240 {
+        top:400px;
+        left:365px;
+      }
+
+      .f-m-2307 {
+        top:360px;
+        left:750px;
+      }
+
+      .f-m-1980 {
+        top:440px;
+        left:890px;
+      }
+
+      .f-m-1815 {
+        top:480px;
+        left:1020px;
+      }
+
+      .f-m-1407 {
+        top:560px;
+        left:1190px;
+      }
+
+      .f-m-1630 {
+        top:560px;
+        left:470px;
+      }
+
+      .f-m-1680 {
+        top:610px;
+        left:2035px;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slideshow-container windbeutelbaron">
+    <p class="marker desc h">Webcam Höhe: 950m</p>
+    <a class="link" href="https://www.foto-webcam.eu/webcam/windbeutelbaron/" target="_blank">©Bild: foto-webcam.eu</a>
+    <p class="copyright">©Text: Bergwacht Ramsau</p>
+
+    <p class="marker w-m-1930">_________Watzmannhaus 1930 m</p>
+    <p class="marker w-m-2250">_________2250 m</p>
+    <p class="marker w-m-2651">_________Hocheck 2651 m</p>
+    <p class="marker w-m-2307">Watzmannfrau 2307 m_________</p>
+    <p class="marker w-m-1980">1980 m_________</p>
+    <p class="marker w-m-1815">1815 m_________<br />Mooslahner</p>
+    <p class="marker w-m-1630">_________Falzalm 1630 m</p>
+    <p class="marker w-m-1304">Grünstein 1304 m_________</p>
+    <p class="marker w-m-1791">_________Stanglahnerkopf 1791 m</p>
+    <p class="marker w-m-2367">_________Rotpalfen 2367 m</p>
+    <p class="marker w-m-2065">_________Steinberg 2065 m</p>
+
+    <p class="marker desc w active">Windbeutelbaron</p>
+    <p class="marker desc v">Vorderloiplsau</p>
+    <p class="marker desc s">Stöhrhaus</p>
+    <p class="marker desc f">Funtenseetauern</p>
+  </div>
+  <div class="slideshow-container vorderloiplsau">
+    <p class="marker desc h">Webcam Höhe: 1054m</p>
+    <a class="link" href="https://www.foto-webcam.eu/webcam/vorderloiplsau/" target="_blank">©Bild: foto-webcam.eu</a>
+    <p class="copyright">©Text: Bergwacht Ramsau</p>
+
+
+    <p class="marker v-m-1710">_________1710 m</p>
+    <p class="marker v-m-1813">_________1813 m</p>
+    <p class="marker v-m-2066">_________Wasserwandkopf 2065 m</p>
+    <p class="marker v-m-1360">_________Schärtenalm 1360 m</p>
+    <p class="marker v-m-1510">_________1510 m</p>
+    <p class="marker v-m-1210">_________Halsalm 1210 m</p>
+    <p class="marker v-m-2367">_________Rotpalfen 2367 m</p>
+    <p class="marker v-m-2286">Stadelhorn 2286 m_________</p>
+    <p class="marker v-m-2065">Steinberg 2065 m_________</p>
+    <p class="marker v-m-1770">1770 m_________</p>
+    <p class="marker v-m-1470">1470 m_________</p>
+    <p class="marker v-m-1250">1250 m_________</p>
+    <p class="marker v-m-1170">1170 m_________</p>
+    <p class="marker v-m-1950">1950 m_________</p>
+    <p class="marker v-m-1370">_________1370 m</p>
+
+
+    <p class="marker desc w">Windbeutelbaron</p>
+    <p class="marker desc v active">Vorderloiplsau</p>
+    <p class="marker desc s">Stöhrhaus</p>
+    <p class="marker desc f">Funtenseetauern</p>
+  </div>
+  <div class="slideshow-container stoehrhaus">
+    <p class="marker desc h">Webcam Höhe: 1894m</p>
+    <a class="link" href="https://www.foto-webcam.eu/webcam/stoehrhaus/" target="_blank">©Bild: foto-webcam.eu</a>
+    <p class="copyright">©Text: Bergwacht Ramsau</p>
+
+    <p class="marker s-m-1304">Grünstein 1304 m_________</p>
+    <p class="marker s-m-1407">Kühroint 1407 m_________</p>
+    <p class="marker s-m-1850">Gendarm 1850 m_________</p>
+    <p class="marker s-m-2307">kl. Watzmann 2307 m_________</p>
+    <p class="marker s-m-1180">_________Stubenalm 1180 m</p>
+    <p class="marker s-m-2065">Steinberg 2065 m_________</p>
+    <p class="marker s-m-1385">_________Hirschkaser 1385 m</p>
+
+    <p class="marker desc w">Windbeutelbaron</p>
+    <p class="marker desc v">Vorderloiplsau</p>
+    <p class="marker desc s active">Stöhrhaus</p>
+    <p class="marker desc f">Funtenseetauern</p>
+  </div>
+  <div class="slideshow-container funtenseetauern">
+    <p class="marker desc h">Webcam Höhe: 2520m</p>
+    <a class="link" href="https://www.foto-webcam.eu/webcam/funtenseetauern/" target="_blank">©Bild: foto-webcam.eu</a>
+    <p class="copyright">©Text: Bergwacht Ramsau</p>
+
+    <p class="marker f-m-2380">_________Biwak 2380 m</p>
+    <p class="marker f-m-2240">_________Skischarte 2240 m</p>
+    <p class="marker f-m-2307">_________kl. Watzmann 2307 m</p>
+    <p class="marker f-m-1980">_________1980 m</p>
+    <p class="marker f-m-1815">_________Mooslahner 1815 m</p>
+    <p class="marker f-m-1407">_________Kühroint 1407 m</p>
+    <p class="marker f-m-1630">Watzmannlabl 1630 m_________</p>
+    <p class="marker f-m-1680">_________Gotzenalm 1680 m</p>
+
+    <p class="marker desc w">Windbeutelbaron</p>
+    <p class="marker desc v">Vorderloiplsau</p>
+    <p class="marker desc s">Stöhrhaus</p>
+    <p class="marker desc f active">Funtenseetauern</p>
+  </div>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slideshow-container");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 15000); // Change image every 15 seconds
+    }
+  </script>
+</body>
+
 </html>
